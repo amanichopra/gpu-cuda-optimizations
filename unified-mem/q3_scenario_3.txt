@@ -1,0 +1,22 @@
+==1084198== NVPROF is profiling process 1084198, command: ./q3 scenario-3
+==1084198== Profiling application: ./q3 scenario-3
+==1084198== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  234.47ms         5  46.894ms  2.2618ms  137.40ms  addArraysKernel(float*, float*, float*, int)
+      API calls:   46.13%  276.01ms        15  18.401ms  16.803us  275.31ms  cudaMallocManaged
+                   39.21%  234.57ms         5  46.913ms  2.2723ms  137.42ms  cudaDeviceSynchronize
+                   14.60%  87.324ms        15  5.8216ms  168.91us  16.882ms  cudaFree
+                    0.04%  215.87us         5  43.173us  38.755us  45.996us  cudaLaunchKernel
+                    0.02%  145.63us       101  1.4410us     138ns  63.487us  cuDeviceGetAttribute
+                    0.00%  27.943us         1  27.943us  27.943us  27.943us  cuDeviceGetName
+                    0.00%  8.7160us         1  8.7160us  8.7160us  8.7160us  cuDeviceGetPCIBusId
+                    0.00%  2.3160us         3     772ns     204ns  1.8860us  cuDeviceGetCount
+                    0.00%     656ns         2     328ns     153ns     503ns  cuDeviceGet
+                    0.00%     331ns         1     331ns     331ns     331ns  cuDeviceTotalMem
+                    0.00%     291ns         1     291ns     291ns     291ns  cuModuleGetLoadingMode
+                    0.00%     240ns         1     240ns     240ns     240ns  cuDeviceGetUuid
+
+==1084198== Unified Memory profiling result:
+Device "Tesla P100-PCIE-16GB (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+    2392         -         -         -           -  233.5339ms  Gpu page fault groups

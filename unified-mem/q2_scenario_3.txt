@@ -1,0 +1,19 @@
+==1083873== NVPROF is profiling process 1083873, command: ./q2 scenario-3
+==1083873== Profiling application: ./q2 scenario-3
+==1083873== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   98.71%  279.89ms        10  27.989ms  698.62us  84.774ms  [CUDA memcpy HtoD]
+                    1.29%  3.6627ms         5  732.53us  26.144us  2.2022ms  addArraysKernel(float*, float*, float*, int)
+      API calls:   49.64%  282.19ms        10  28.219ms  921.25us  85.019ms  cudaMemcpy
+                   44.95%  255.51ms        15  17.034ms  88.158us  251.08ms  cudaMalloc
+                    4.67%  26.570ms        15  1.7713ms  154.54us  6.4798ms  cudaFree
+                    0.67%  3.7946ms         5  758.93us  68.370us  2.2112ms  cudaDeviceSynchronize
+                    0.03%  194.77us         5  38.954us  29.699us  54.843us  cudaLaunchKernel
+                    0.03%  149.01us       101  1.4750us     136ns  61.552us  cuDeviceGetAttribute
+                    0.01%  33.987us         1  33.987us  33.987us  33.987us  cuDeviceGetName
+                    0.00%  7.9380us         1  7.9380us  7.9380us  7.9380us  cuDeviceGetPCIBusId
+                    0.00%  2.1970us         3     732ns     231ns  1.6670us  cuDeviceGetCount
+                    0.00%     930ns         2     465ns     266ns     664ns  cuDeviceGet
+                    0.00%     774ns         1     774ns     774ns     774ns  cuModuleGetLoadingMode
+                    0.00%     574ns         1     574ns     574ns     574ns  cuDeviceTotalMem
+                    0.00%     212ns         1     212ns     212ns     212ns  cuDeviceGetUuid
